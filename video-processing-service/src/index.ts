@@ -1,7 +1,6 @@
 import express from "express";
 import ffmpeg from "fluent-ffmpeg";
 const app = express();
-const port = 3000;
 
 app.post("/process-video", (req, res) => {
   //Get path from input video from the request body
@@ -30,6 +29,8 @@ app.post("/process-video", (req, res) => {
     }
   }
 });
+
+const port = process.env.PORt || 3000;
 
 app.listen(port, () => {
   console.log(
