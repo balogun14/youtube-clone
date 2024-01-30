@@ -8,7 +8,6 @@ app.post("/process-video", (req, res) => {
 	//Get path from input video from the request body
 	const inputFilePath = req.body.inputFilePath;
 	const outputFilePath = req.body.outputFilePath;
-	console.log(inputFilePath);
 
 	if (!inputFilePath || !outputFilePath) {
 		res.status(400).send("Bad request: Missing file path.");
